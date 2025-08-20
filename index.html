@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="phn/phn.css" />
   </head>
   <body>
+    babu
+
     <input
       required
       id="phone"
@@ -14,17 +16,15 @@
       type="text"
       placeholder="(000) 000-0000"
     />
+
     <script src="phn/phn.js"></script>
+    <script src="phn/utils.js"></script>
+
     <script>
-      (function () {
-        var input = document.querySelector("#phone");
-        if (!input) return;
-        window.intlTelInput(input, {
-          allowDropdown: true,
-          dropdownContainer: document.body,
-          utilsScript: "phn/utils.js",
-        });
-      })();
+      var input = document.querySelector("#phone");
+      window.intlTelInput(input, {
+        utilsScript: "build/js/utils.js",
+      });
     </script>
   </body>
 </html>
